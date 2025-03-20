@@ -8,10 +8,10 @@
 	Author URI: https://plugin-planet.com/
 	Donate link: https://monzillamedia.com/donate.html
 	Contributors: specialk
-	Requires at least: 4.6
-	Tested up to: 6.7
-	Stable tag: 2.6.4
-	Version:    2.6.4
+	Requires at least: 4.7
+	Tested up to: 6.8
+	Stable tag: 2.6.5
+	Version:    2.6.5
 	Requires PHP: 5.6.20
 	Text Domain: disable-wp-rest-api
 	Domain Path: /languages

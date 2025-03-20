@@ -8,10 +8,10 @@ Author: Jeff Starr
 Author URI: https://plugin-planet.com/
 Donate link: https://monzillamedia.com/donate.html
 Contributors: specialk
-Requires at least: 4.6
-Tested up to: 6.7
-Stable tag: 2.6.4
-Version:    2.6.4
+Requires at least: 4.7
+Tested up to: 6.8
+Stable tag: 2.6.5
+Version:    2.6.5
 Requires PHP: 5.6.20
 Text Domain: disable-wp-rest-api
 Domain Path: /languages
@@ -68,7 +68,7 @@ More information available below in the FAQs section.
 
 This plugin does not collect or store any user data. It does not set any cookies, and it does not connect to any third-party locations. Thus, this plugin does not affect user privacy in any way. If anything it _improves_ user privacy, as it protects potentially sensitive information from being displayed/accessed via REST API.
 
-Disable WP REST API is developed and maintained by [Jeff Starr](https://twitter.com/perishable), 15-year [WordPress developer](https://plugin-planet.com/) and [book author](https://books.perishablepress.com/).
+Disable WP REST API is developed and maintained by [Jeff Starr](https://x.com/perishable), 15-year [WordPress developer](https://plugin-planet.com/) and [book author](https://books.perishablepress.com/).
 
 
 
@@ -195,6 +195,7 @@ And/or purchase one of my premium WordPress plugins:
 * [Blackhole Pro](https://plugin-planet.com/blackhole-pro/) - Automatically block bad bots
 * [Banhammer Pro](https://plugin-planet.com/banhammer-pro/) - Monitor traffic and ban the bad guys
 * [GA Google Analytics Pro](https://plugin-planet.com/ga-google-analytics-pro/) - Connect WordPress to Google Analytics
+* [Head Meta Pro](https://plugin-planet.com/head-meta-pro/) - Ultimate Meta Tags for WordPress
 * [Simple Ajax Chat Pro](https://plugin-planet.com/simple-ajax-chat-pro/) - Unlimited chat rooms
 * [USP Pro](https://plugin-planet.com/usp-pro/) - Unlimited front-end forms
 
@@ -207,9 +208,9 @@ Links, tweets and likes also appreciated. Thank you! :)
 If you like Disable WP REST API, please take a moment to [give a 5-star rating](https://wordpress.org/support/plugin/disable-wp-rest-api/reviews/?rate=5#new-post). It helps to keep development and support going strong. Thank you!
 
 
-= 2.6.4 =
+= 2.6.5 =
 
-* Tests on WordPress 6.7
+* Tests on WordPress 6.8
 
 
 Full changelog @ [https://plugin-planet.com/wp/changelog/disable-wp-rest-api.txt](https://plugin-planet.com/wp/changelog/disable-wp-rest-api.txt)
