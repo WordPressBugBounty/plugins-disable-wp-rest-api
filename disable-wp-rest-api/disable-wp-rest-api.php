@@ -9,14 +9,29 @@
 	Donate link: https://monzillamedia.com/donate.html
 	Contributors: specialk
 	Requires at least: 4.7
-	Tested up to: 6.8
-	Stable tag: 2.6.5
-	Version:    2.6.5
+	Tested up to: 6.9
+	Stable tag: 2.6.7
+	Version:    2.6.7
 	Requires PHP: 5.6.20
 	Text Domain: disable-wp-rest-api
 	Domain Path: /languages
 	License: GPL v2 or later
 	License URI: https://www.gnu.org/licenses/gpl-2.0.html
+	
+	This program is free software; you can redistribute it and/or
+	modify it under the terms of the GNU General Public License
+	as published by the Free Software Foundation; either version 
+	2 of the License, or (at your option) any later version.
+	
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+	
+	You should have received a copy of the GNU General Public License
+	with this program. If not, visit: https://www.gnu.org/licenses/
+	
+	Copyright 2017-2026 Monzilla Media. All rights reserved.
 */
 
 if (!defined('ABSPATH')) die();

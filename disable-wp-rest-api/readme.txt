@@ -9,9 +9,9 @@ Author URI: https://plugin-planet.com/
 Donate link: https://monzillamedia.com/donate.html
 Contributors: specialk
 Requires at least: 4.7
-Tested up to: 6.8
-Stable tag: 2.6.5
-Version:    2.6.5
+Tested up to: 6.9
+Stable tag: 2.6.7
+Version:    2.6.7
 Requires PHP: 5.6.20
 Text Domain: disable-wp-rest-api
 Domain Path: /languages
@@ -24,9 +24,13 @@ Disables the WP REST API for visitors not logged into WordPress.
 
 == Description ==
 
-This plugin does one thing: disables the WP REST API for visitors who are not logged into WordPress. No configuration required.
+__Does one thing:__ Completely disables the WordPress REST API for visitors who are not logged into WordPress. No configuration required.
 
-This plugin works with only 22 short lines of code (less than 2KB). So it is _super lightweight, fast, and effective_.
+__Important:__ This plugin completely disables the WP REST API for visitors who are NOT logged in to WordPress. So not recommended if your site needs the WP REST API for any non-logged users.
+
+👉 The fast, simple way to prevent abuse of your site's REST/JSON API
+👉 Protects your site's REST data from all non-logged users and bots
+👉 Uses only 4KB of code, so super lightweight, fast, and effective
 
 
 
@@ -37,30 +41,19 @@ This plugin works with only 22 short lines of code (less than 2KB). So it is _su
 * Disables REST links in HTML head for all users
 * 100% plug-and-play, set-it-and-forget solution
 
-_The fast, simple way to prevent abuse of your site's REST/JSON API_
 
-How does it work? That depends on which version of WordPress you are using..
+**How does it work?**
 
-
-**WordPress v4.7 and beyond**
-
-For WordPress 4.7 and better, this plugin completely disables the WP REST API _unless_ the user is logged into WordPress. 
+This plugin completely disables the WP REST API _unless_ the user is logged into WordPress. 
 
 * For logged-in users, WP REST API works normally
 * For logged-out users, WP REST API is disabled
 
 What happens if logged-out visitor makes a JSON/REST request? They will get only a simple message:
 
-"rest_login_required: REST API restricted to authenticated users."
+	rest_login_required: REST API restricted to authenticated users.
 
 This message may customized via the filter hook, `disable_wp_rest_api_error`. Check out [this post](https://wordpress.org/support/topic/not-entirely-for-non-techies/#post-12014965) for an example of how to do it.
-
-
-**Older versions of WordPress**
-
-For WordPress versions less than 4.7, this plugin simply disables all REST API functionality for all users.
-
-More information available below in the FAQs section.
 
 
 
@@ -79,7 +72,7 @@ Disable WP REST API is developed and maintained by [Jeff Starr](https://x.com/pe
 1. Upload the plugin to your blog and activate
 2. Done! No further configuration is required.
 
-[More info on installing WP plugins](https://wordpress.org/support/article/managing-plugins/#installing-plugins)
+[More info on installing WP plugins](https://wordpress.org/documentation/article/manage-plugins/#installing-plugins-1)
 
 
 **Testing**
@@ -92,27 +85,23 @@ To test that the plugin is working, log out of WordPress and then request `https
 If you like Disable WP REST API, please take a moment to [give a 5-star rating](https://wordpress.org/support/plugin/disable-wp-rest-api/reviews/?rate=5#new-post). It helps to keep development and support going strong. Thank you!
 
 
+**Uninstalling**
+
+To uninstall/remove the plugin, visit the Plugins screen, deactivate and delete the plugin. This plugin makes no changes to the WP database.
+
+
 
 == Upgrade Notice ==
 
-To upgrade this plugin, remove the old version and replace with the new version. Or just click "Update" from the Plugins screen and let WordPress do it for you automatically.
-
-Note: this plugin does not add anything to your WP database.
+Visit the WordPress Plugins screen, locate the plugin, and click "Update" :)
 
 
 
 == Frequently Asked Questions ==
 
-**What is the default access-denied message?**
-
-When the user is logged in to WordPress, the normal REST API data will be displayed. When the user is *not* logged in, this is the default message:
-
-`{"code":"rest_login_required","message":"REST API restricted to authenticated users.","data":{"status":401}}`
-
-
 **Why would anyone want to disable the REST API?**
 
-Technically this plugin only disables REST API for visitors who are not logged into WordPress. With that in mind, here are some good reasons why someone would want to disable REST API for non-logged users:
+Technically this plugin disables REST API only for visitors who are __not__ logged into WordPress. With that in mind, here are some good reasons why someone would want to disable REST API for non-logged users:
 
 * The REST API may not be needed for non-logged users
 * Disabling the REST API conserves server resources
@@ -122,14 +111,11 @@ Technically this plugin only disables REST API for visitors who are not logged i
 I'm sure there are [other valid reasons](https://digwp.com/2018/08/secure-wp-rest-api/), but you get the idea :)
 
 
-**There already is another "Disable REST" plugin?**
+**What is the default access-denied message?**
 
-Yep, actually there are two other "Disable REST" plugins:
+When the user is logged in to WordPress, the normal REST API data will be displayed. When the user is *not* logged in, this is the default message:
 
-* [Disable JSON API](https://wordpress.org/plugins/disable-json-api/)
-* [Disable REST API](https://wordpress.org/plugins/disable-rest-api/)
-
-The first of those plugins is awesome and provides a LOT more features and functionality than is required to simply disable REST. And the second plugin was shut down due to lack of use. I wrote my disable-REST plugin because I wanted something super lightweight, fast, and effective. If you are looking for more options and features, then check out the first of those two listed alternatives.
+`{"code":"rest_login_required","message":"REST API restricted to authenticated users.","data":{"status":401}}`
 
 
 **How do I test that REST is disabled?**
@@ -148,7 +134,7 @@ Then if you log back in and make a new request for `https://example.com/wp-json/
 
 **Does it disable REST functionality added by other plugins?**
 
-Yes, if the REST endpoints are registered with the WP REST API.
+Yes. If the user is NOT logged in, this plugin disables ALL endpoints that are registered with the WP REST API. Otherwise, if the user IS logged in, then this plugin does not block anything.
 
 
 **Does this work with Gutenberg/Block Editor?**
@@ -191,7 +177,7 @@ I develop and maintain this free plugin with love for the WordPress community. T
 
 And/or purchase one of my premium WordPress plugins:
 
-* [BBQ Pro](https://plugin-planet.com/bbq-pro/) - Super fast WordPress firewall
+* [BBQ Pro](https://plugin-planet.com/bbq-pro/) - Blazing fast WordPress firewall
 * [Blackhole Pro](https://plugin-planet.com/blackhole-pro/) - Automatically block bad bots
 * [Banhammer Pro](https://plugin-planet.com/banhammer-pro/) - Monitor traffic and ban the bad guys
 * [GA Google Analytics Pro](https://plugin-planet.com/ga-google-analytics-pro/) - Connect WordPress to Google Analytics
@@ -208,9 +194,12 @@ Links, tweets and likes also appreciated. Thank you! :)
 If you like Disable WP REST API, please take a moment to [give a 5-star rating](https://wordpress.org/support/plugin/disable-wp-rest-api/reviews/?rate=5#new-post). It helps to keep development and support going strong. Thank you!
 
 
-= 2.6.5 =
+= 2.6.7 =
 
-* Tests on WordPress 6.8
+* Adds GNU/GPL license information
+* Improves readme.txt documentation
+* Tests on PHP 8.4 and 8.5
+* Tests on WordPress 6.9
 
 
 Full changelog @ [https://plugin-planet.com/wp/changelog/disable-wp-rest-api.txt](https://plugin-planet.com/wp/changelog/disable-wp-rest-api.txt)
