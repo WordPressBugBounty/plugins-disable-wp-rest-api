@@ -9,9 +9,9 @@ Author URI: https://plugin-planet.com/
 Donate link: https://monzillamedia.com/donate.html
 Contributors: specialk
 Requires at least: 4.7
-Tested up to: 6.9
-Stable tag: 2.6.7
-Version:    2.6.7
+Tested up to: 7.0
+Stable tag: 2.6.8
+Version:    2.6.8
 Requires PHP: 5.6.20
 Text Domain: disable-wp-rest-api
 Domain Path: /languages
@@ -32,6 +32,8 @@ __Important:__ This plugin completely disables the WP REST API for visitors who 
 👉 Protects your site's REST data from all non-logged users and bots
 👉 Uses only 4KB of code, so super lightweight, fast, and effective
 
+🛠️ Pro version available! [Check out REST Pro Tools &raquo;](https://plugin-planet.com/rest-pro-tools/)
+
 
 
 == Features ==
@@ -46,14 +48,39 @@ __Important:__ This plugin completely disables the WP REST API for visitors who 
 
 This plugin completely disables the WP REST API _unless_ the user is logged into WordPress. 
 
-* For logged-in users, WP REST API works normally
-* For logged-out users, WP REST API is disabled
+* For logged-in (authenticated) users, WP REST API works normally
+* For logged-out (unauthenticated) users, WP REST API is disabled
 
 What happens if logged-out visitor makes a JSON/REST request? They will get only a simple message:
 
 	rest_login_required: REST API restricted to authenticated users.
 
 This message may customized via the filter hook, `disable_wp_rest_api_error`. Check out [this post](https://wordpress.org/support/topic/not-entirely-for-non-techies/#post-12014965) for an example of how to do it.
+
+
+
+== Pro Version ==
+
+🛠️ Check out the Pro version, [REST Pro Tools](https://plugin-planet.com/rest-pro-tools/), loaded with many awesome features:
+
+* One-click disable all routes
+* One-click disable all /users routes
+* Disable any specific user routes based on role
+* Whitelist any user IDs
+* Whitelist any IP addresses
+* Customize the REST error message
+* Customize the REST response code
+* Always require or force SSL/TLS
+* Disable all JSONP shenanigans
+* One-click disable any REST API headers
+* Add any post meta (custom field) to REST API
+* Add any user meta (custom field) to REST API
+* Add routes for site profile and author profile
+* Add routes for featured images and post categories
+* Add routes for post taxonomies and terms
+* At-a-glance check status of REST API
+
+The free version does only one thing: disables REST API for unauthenticated users. The PRO version can do that and much more! Take full control of the REST API with [REST Pro Tools&nbsp;&raquo;](https://plugin-planet.com/rest-pro-tools/)
 
 
 
@@ -78,6 +105,11 @@ Disable WP REST API is developed and maintained by [Jeff Starr](https://x.com/pe
 **Testing**
 
 To test that the plugin is working, log out of WordPress and then request `https://example.com/wp-json/` in a browser. See FAQs for more infos.
+
+
+**Pro Version**
+
+Need more control of the WP REST API? [Check out the Pro version&nbsp;&raquo;](https://plugin-planet.com/rest-pro-tools/)
 
 
 **Like the plugin?**
@@ -182,6 +214,7 @@ And/or purchase one of my premium WordPress plugins:
 * [Banhammer Pro](https://plugin-planet.com/banhammer-pro/) - Monitor traffic and ban the bad guys
 * [GA Google Analytics Pro](https://plugin-planet.com/ga-google-analytics-pro/) - Connect WordPress to Google Analytics
 * [Head Meta Pro](https://plugin-planet.com/head-meta-pro/) - Ultimate Meta Tags for WordPress
+* [REST Pro Tools](https://plugin-planet.com/rest-pro-tools/) - Awesome tools for managing the WP REST API
 * [Simple Ajax Chat Pro](https://plugin-planet.com/simple-ajax-chat-pro/) - Unlimited chat rooms
 * [USP Pro](https://plugin-planet.com/usp-pro/) - Unlimited front-end forms
 
@@ -193,13 +226,14 @@ Links, tweets and likes also appreciated. Thank you! :)
 
 If you like Disable WP REST API, please take a moment to [give a 5-star rating](https://wordpress.org/support/plugin/disable-wp-rest-api/reviews/?rate=5#new-post). It helps to keep development and support going strong. Thank you!
 
+> 🛠️ Pro version now available! Get granular control over the REST API with [REST Pro Tools&nbsp;&raquo;](https://plugin-planet.com/rest-pro-tools/)
 
-= 2.6.7 =
 
-* Adds GNU/GPL license information
+= 2.6.8 =
+
 * Improves readme.txt documentation
-* Tests on PHP 8.4 and 8.5
-* Tests on WordPress 6.9
+* Adds blurb about new pro version
+* Tests on WordPress 7.0
 
 
 Full changelog @ [https://plugin-planet.com/wp/changelog/disable-wp-rest-api.txt](https://plugin-planet.com/wp/changelog/disable-wp-rest-api.txt)

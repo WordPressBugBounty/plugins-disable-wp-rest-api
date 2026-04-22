@@ -9,9 +9,9 @@
 	Donate link: https://monzillamedia.com/donate.html
 	Contributors: specialk
 	Requires at least: 4.7
-	Tested up to: 6.9
-	Stable tag: 2.6.7
-	Version:    2.6.7
+	Tested up to: 7.0
+	Stable tag: 2.6.8
+	Version:    2.6.8
 	Requires PHP: 5.6.20
 	Text Domain: disable-wp-rest-api
 	Domain Path: /languages
@@ -133,15 +133,17 @@ function disable_wp_rest_api_legacy() {
 	
 }
 
-function disable_wp_rest_api_plugin_links($links, $file) {
+//
+
+function disable_wp_rest_api_plugin_row_meta($links, $file) {
 	
 	if ($file === plugin_basename(__FILE__)) {
 		
-		$home_href  = 'https://perishablepress.com/disable-wp-rest-api/';
-		$home_title = esc_attr__('Plugin Homepage', 'disable-wp-rest-api');
-		$home_text  = esc_html__('Homepage', 'disable-wp-rest-api');
+		$home_href  = 'https://plugin-planet.com/rest-pro-tools/';
+		$home_title = esc_attr__('Get REST Pro Tools', 'disable-wp-rest-api');
+		$home_text  = esc_html__('Go&nbsp;Pro', 'disable-wp-rest-api');
 		
-		$links[] = '<a target="_blank" rel="noopener noreferrer" href="'. $home_href .'" title="'. $home_title .'">'. $home_text .'</a>';
+		$links[] = '🛠️ <strong><a target="_blank" rel="noopener noreferrer" href="'. $home_href .'" title="'. $home_title .'">'. $home_text .'</a></strong>';
 		
 		$rate_href  = 'https://wordpress.org/support/plugin/disable-wp-rest-api/reviews/?rate=5#new-post';
 		$rate_title = esc_attr__('Please give a 5-star rating! A huge THANK YOU for your support!', 'disable-wp-rest-api');
@@ -154,4 +156,24 @@ function disable_wp_rest_api_plugin_links($links, $file) {
 	return $links;
 	
 }
-add_filter('plugin_row_meta', 'disable_wp_rest_api_plugin_links', 10, 2);
+add_filter('plugin_row_meta', 'disable_wp_rest_api_plugin_row_meta', 10, 2);
+
+function disable_wp_rest_api_plugin_action_links($links, $file) {
+	
+	if ($file === plugin_basename(__FILE__)) {
+		
+		$pro_href  = 'https://plugin-planet.com/rest-pro-tools/';
+		$pro_title = esc_attr__('Get REST Pro Tools', 'disable-wp-rest-api');
+		$pro_text  = esc_html__('Go&nbsp;Pro', 'disable-wp-rest-api');
+		$pro_style = 'padding:2px 4px;font-weight:bold;border:1px solid #00CCCC;border-radius:2px;background-color:#fff;';
+		
+		$pro = '<a target="_blank" rel="noopener noreferrer" href="'. $pro_href .'" title="'. $pro_title .'" style="'. $pro_style .'">'. $pro_text .'</a>';
+		
+		array_unshift($links, $pro);
+		
+	}
+	
+	return $links;
+	
+}
+add_filter ('plugin_action_links', 'disable_wp_rest_api_plugin_action_links', 10, 2);
