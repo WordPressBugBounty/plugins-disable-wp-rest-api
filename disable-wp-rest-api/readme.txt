@@ -9,9 +9,9 @@ Author URI: https://plugin-planet.com/
 Donate link: https://monzillamedia.com/donate.html
 Contributors: specialk
 Requires at least: 4.7
-Tested up to: 7.0
-Stable tag: 2.6.8
-Version:    2.6.8
+Tested up to: 7.1
+Stable tag: 2.6.9
+Version:    2.6.9
 Requires PHP: 5.6.20
 Text Domain: disable-wp-rest-api
 Domain Path: /languages
@@ -228,6 +228,10 @@ If you like Disable WP REST API, please take a moment to [give a 5-star rating](
 
 > 🛠️ Pro version now available! Get granular control over the REST API with [REST Pro Tools&nbsp;&raquo;](https://plugin-planet.com/rest-pro-tools/)
 
+
+= 2.6.9 =
+
+* Tests on WordPress 7.1
 
 = 2.6.8 =
 
